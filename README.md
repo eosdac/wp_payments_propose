@@ -1,4 +1,4 @@
-## Scripts to generate proposals for payments from a miltisig account
+## Scripts to generate proposals for payments from a multisig account
 
 Edit the wp_payments_propose.sh file and change the payment variables at the top.
 
