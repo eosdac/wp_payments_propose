@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PROPOSER=[the account making the proposals]
-PAYER=[the account making the payments]
+PROPOSER=mryeateshere
+PAYER=eosdacthedac
 URL=https://eu.eosdac.io
 CLEOS="cleos -u $URL"
 PREFIX="wppayment"
@@ -30,7 +30,7 @@ get_wp_name (){
 }
 
 
-
+echo "" > output.txt
 
 OLDIFS=$IFS
 IFS=,
