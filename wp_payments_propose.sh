@@ -44,7 +44,7 @@ do
 	echo "Comment : $comment"
 	echo "----------------"
 
-	echo "{\"from\": \"$PAYER\", \"to\": \"$account\", \"quantity\": \"$amount.0000 EOS\", \"memo\": \"$memo\"}" > trx.json
+	echo "{\"from\": \"$PAYER\", \"to\": \"$account\", \"quantity\": \"$amount.0000 EOS\", \"memo\": \"$comment\"}" > trx.json
 	
 	prop_name=''
 	get_wp_name prop_name
