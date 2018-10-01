@@ -46,7 +46,7 @@ do
 
 	AMOUNT=$(printf "%.4f" $amount)
 
-	echo "{\"from\": \"$PAYER\", \"to\": \"$account\", \"quantity\": \"$AMOUNT EOS\", \"memo\": \"$comment\"}" > trx.json
+	echo "{\"from\": \"$PAYER\", \"to\": \"$account\", \"quantity\": \"$AMOUNT EOS\", \"memo\": \"$memo\"}" > trx.json
 	
 	prop_name=''
 	get_wp_name prop_name
