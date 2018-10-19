@@ -1,11 +1,16 @@
 #!/bin/bash
 # NOTE: Requires https://stedolan.github.io/jq/
 
-PROPOSER=mryeateshere
-APPROVER=lukeeosproxy
+PROPOSER=lukeeosproxy
+APPROVER=mryeateshere
 URL=https://eu.eosdac.io
 CLEOS="cleos -u $URL"
 #CLEOS="/Users/lukestokes/Documents/workspace/eosDAC/chains/mainnet/cleos.sh"
+
+if [[ "$1" == "" ]]; then
+    echo "Usage : ./proposal_review_and_approve.sh [ proposal name ]"
+    exit 1
+fi
 
 $CLEOS multisig review $PROPOSER $1 | jq '.transaction.actions[].data'
 
