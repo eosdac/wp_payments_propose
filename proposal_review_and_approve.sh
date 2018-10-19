@@ -12,7 +12,13 @@ if [[ "$1" == "" ]]; then
     exit 1
 fi
 
-$CLEOS multisig review $PROPOSER $1 | jq '.transaction.actions[].data'
+RES=$($CLEOS multisig review $PROPOSER $1 | jq '.transaction.actions[].data')
+if [[ "$RES" == "" ]]; then
+    echo "Proposal $1 from $PROPOSER was not found"
+    exit 2
+fi
+
+echo $RES
 
 read -p "Do you want to approve proposal $1 (Y/N)?" -n 1 -r
 echo    # (optional) move to a new line
