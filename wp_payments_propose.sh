@@ -51,8 +51,8 @@ do
 	prop_name=''
 	get_wp_name prop_name
 
-	echo "$CLEOS multisig propose $prop_name ./reqperms.json ./trxperm.json eosio.token transfer ./trx.json $PROPOSER 24"
-	cmd="$CLEOS multisig propose $prop_name ./reqperms.json ./trxperm.json eosio.token transfer ./trx.json $PROPOSER 24"
+	echo "$CLEOS multisig propose $prop_name ./reqperms.json ./trxperm.json eosio.token transfer ./trx.json $PROPOSER 72"
+	cmd="$CLEOS multisig propose $prop_name ./reqperms.json ./trxperm.json eosio.token transfer ./trx.json $PROPOSER 72"
 	res=$(eval $cmd)
 
 	echo "----------------"
